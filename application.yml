@@ -1,0 +1,28 @@
+---
+
+solution_txtypes: EPRESCRIBING_HUB
+
+test.logical.host: application
+
+notifications:
+  mailto: todo@test.com
+  enabled: false
+
+cache.lifetime:
+  subscriptionenforcement: 10800000 # ← Milliseconds
+  suppression: 1800000
+
+tcp:
+  inbound:
+    port: 8080 #In PCF, feeds must always listen on port 8080
+    readbuffer: 102400
+  server.connection.timeout: 0
+
+http.inbound.port: 8080 #In PCF, feeds must always listen on port 8080
+
+
+
+---
+spring.profiles: dev
+
+cache.lifetime.suppression: 45000 #Shorter lifetime for suppression tests
