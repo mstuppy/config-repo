@@ -1,0 +1,13 @@
+---
+http:
+  outbound.timeout: 17000
+  connection.timeout: 3000
+
+
+
+---
+spring.profiles: dev
+
+threads: 20
+
+rule.loading.threads: 1

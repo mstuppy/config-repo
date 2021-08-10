@@ -1,0 +1,36 @@
+---
+
+http:
+  connection.timeout: 3000
+  outbound.timeout: 32000 # ← Milliseconds
+
+acute.cache.time: 1
+ambulatory.cache.time: 3
+
+
+
+---
+spring.profiles: dev
+
+threads: 20
+
+http.outbound.url: https://cap2.apps.dev.aws.io #TODO doesn't exist yet
+
+hub:
+  participant.id: 11111
+  acute:
+    participant.id: 22222
+
+
+
+---
+spring.profiles: test
+
+threads: 40
+
+http.outbound.url: https://cap2.apps.test.aws.io #TODO doesn't exist yet
+
+hub:
+  participant.id: 33333
+  acute:
+    participant.id: 44444

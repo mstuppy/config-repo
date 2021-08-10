@@ -1,0 +1,25 @@
+---
+http:
+  connection.timeout: 3000
+  outbound.timeout: 38000 # ← Milliseconds
+
+
+tcp.inbound.timeout: 40 # ← Seconds (should be a couple seconds higher than the outbound timeout)
+
+
+
+---
+spring.profiles: dev
+
+threads: 20
+
+http.outbound.address: http://cap2-dev.apps.internal:8080
+
+
+
+---
+spring.profiles: test
+
+threads: 40
+
+http.outbound.address: http://cap2-test.apps.internal:8080
